@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time2Justice • Courses</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  
+<header class="header">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <span class="logo" aria-label="Time2Justice logo">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2l2.2 5.5h-4.4L12 2zm-5 8h10l-2 5h-6l-2-5zm5 10a4 4 0 004-4H8a4 4 0 004 4z"/>
+        </svg>
+      </span>
+      Time2Justice
+    </a>
+    <nav style="display:flex;gap:6px">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="notes.html">Notes</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <h2>LLB (3-Year) Courses</h2>
+    <div class="search" style="margin:10px 0 16px">
+      <input id="courseSearch" class="input" placeholder="Search by title, year, teacher, or tag..." />
+      <span class="badge">Try: constitution, contracts, evidence</span>
+    </div>
+    <section id="courseList" class="grid cols-3"></section>
+  </main>
+  
+<footer class="footer">
+  <div class="container">© 2025 Time2Justice • LLB 3-Year Course Portal</div>
+</footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

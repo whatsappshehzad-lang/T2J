@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time2Justice • Contact</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .two{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:860px){.two{grid-template-columns:2fr 1fr}}
+    .contact-info .row{display:flex;align-items:center;gap:10px;margin:6px 0}
+    .whats-btn{display:inline-flex;align-items:center;gap:8px;margin-left:10px}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-label="Time2Justice logo">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2l2.2 5.5h-4.4L12 2zm-5 8h10l-2 5h-6l-2-5zm5 10a4 4 0 004-4H8a4 4 0 004 4z"/>
+          </svg>
+        </span>
+        Time2Justice
+      </a>
+      <nav style="display:flex;gap:6px">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="notes.html">Notes</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Contact / Sampark</h2>
+    <p>Send a message to the admin/teacher. (Demo form — shows a success message without server.)</p>
+
+    <div class="two">
+      <form id="contactForm" class="card">
+        <div class="form-field">
+          <label for="name">Your Name / Aapka Naam</label>
+          <input class="input" id="name" name="name" required placeholder="e.g., Shehzad" />
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input class="input" id="email" type="email" name="email" required placeholder="you@example.com" />
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone (optional) / Phone (chunavi)</label>
+          <input class="input" id="phone" type="tel" name="phone" placeholder="+91-XXXXXXXXXX" />
+        </div>
+        <div class="form-field">
+          <label for="subject">Subject / Vishay</label>
+          <input class="input" id="subject" name="subject" placeholder="e.g., Notes request for Evidence Act" />
+        </div>
+        <div class="form-field">
+          <label for="msg">Message / Sandesh</label>
+          <textarea class="input" id="msg" name="message" required placeholder="Type your message..."></textarea>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" type="submit">Send message</button>
+          <a id="waLink" class="btn whats-btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </form>
+
+      <aside class="card contact-info">
+        <h3>Reach Us</h3>
+        <div class="row">📧 <a id="emailLink" href="mailto:time2justice@gmail.com">time2justice@gmail.com</a></div>
+        <div class="row">📞 <a id="phoneLink" href="tel:+917079743764">+91 70797 43764</a></div>
+        <hr />
+        <h3>Address</h3>
+        <p>Time2Justice Academy, New Delhi, India</p>
+        <small>Tip: Edit contact details in <code>contact.html</code> (search for <code>emailLink</code>/<code>phoneLink</code>).</small>
+      </aside>
+    </div>
+
+    <p id="contactOut" class="alert" style="margin-top:12px"></p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2025 Time2Justice • LLB 3-Year Course Portal</div>
+  </footer>
+
+  <script>
+    // WhatsApp link builder
+    const wa = document.getElementById('waLink');
+    function buildWa(){
+      const name = document.getElementById('name').value || '';
+      const subj = document.getElementById('subject').value || 'General query';
+      const msg = document.getElementById('msg').value || '';
+      const text = encodeURIComponent(`Hello Time2Justice,%0AName: ${name}%0ASubject: ${subj}%0AMessage: ${msg}`);
+      // Change the phone to your WhatsApp number (MSISDN format without +): e.g., 917079743764
+      const phone = '917079743764';
+      wa.href = `https://wa.me/${phone}?text=${text}`;
+    }
+    ['name','subject','msg'].forEach(id => {
+      const el = document.getElementById(id);
+      el && el.addEventListener('input', buildWa);
+    });
+    buildWa();
+  </script>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

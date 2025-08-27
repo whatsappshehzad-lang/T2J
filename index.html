@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time2Justice • Home</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  
+<header class="header">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <span class="logo" aria-label="Time2Justice logo">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2l2.2 5.5h-4.4L12 2zm-5 8h10l-2 5h-6l-2-5zm5 10a4 4 0 004-4H8a4 4 0 004 4z"/>
+        </svg>
+      </span>
+      Time2Justice
+    </a>
+    <nav style="display:flex;gap:6px">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="notes.html">Notes</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 👇 Image Section Added -->
+<section class="homepage-screenshot" style="text-align:center; margin: 20px 0;">
+    <h2>Website Preview</h2>
+    <img src="assets/image/homepage.png" alt="Time2Justice Website Screenshot" style="max-width:90%; border: 2px solid #ccc; border-radius: 8px;">
+</section>
+<!-- 👆 Image Section Ends -->
+
+<main class="container hero">
+    <div class="grid cols-3">
+      <section class="card" style="grid-column:1/-1">
+        <h2>Welcome to Time2Justice</h2>
+        <p>Your LLB (3-Year) companion — courses, notes, announcements and more in a clean, law-inspired theme.</p>
+        <div class="alert">Tip: Press <span class="kbd">Ctrl</span> + <span class="kbd">F</span> to quickly find anything.</div>
+      </section>
+
+      <section class="card">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="courses.html">Browse Courses</a></li>
+          <li><a href="notes.html">Download Notes</a></li>
+          <li><a href="contact.html">Contact Admin</a></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Announcements</h3>
+        <ul id="annList" style="display:grid;gap:10px;padding-left:16px"></ul>
+      </section>
+
+      <section class="card">
+        <h3>What’s Inside</h3>
+        <p>Responsive design, search, course filters, and a clean UI you can modify easily.</p>
+        <ul>
+          <li>Pure HTML + CSS + JS</li>
+          <li>Lawyer theme with gold highlights</li>
+          <li>Edit one file to change data</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  
+<footer class="footer">
+  <div class="container">© 2025 Time2Justice • Mohd Shehzad Ahmed. All rights reserved.</div>
+</footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
